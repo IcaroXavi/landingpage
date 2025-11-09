@@ -1,0 +1,36 @@
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  background-color: #ffffff; /* opcional */
+  padding: 20px 0;
+}
+
+.image-container {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite;
+}
+
+.image-container img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.image-container img:hover {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-carousel:hover .image-container {
+  animation-play-state: paused;
+}
